@@ -10,12 +10,14 @@ For details, see: https://docs.github.com/en/rest/guides/getting-started-with-th
 
 After that, fill in the environment variables and run:
 
+<pre>
 docker pull pvalyi/github-query-tool:latest && docker run --rm \
     -e GITHUB_OAUTH='your github token' \
     -e ORG='your organization' \
     -e REPO_REGEX='regex for repo name filtering' \
     -e LOOKBACK_DAYS='max days to look back in commits (default 7)' \
     pvalyi/github-query-tool
+</pre>
 
 Enjoy!
 
