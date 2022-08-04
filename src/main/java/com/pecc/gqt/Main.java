@@ -93,12 +93,13 @@ public class Main {
             String formattedDate = formatInstant(commit.getCommitDate().toInstant());
 
             System.out.printf(
-                    "\t%s %s%n\t\t└ %s%s%s%n",
+                    "\t%s %s%n\t\t└ %s%s%s%n\t\t  %s%n%n",
                     formattedDate,
                     info.getAuthor().getEmail(),
                     ANSI_YELLOW,
                     info.getMessage().replace(System.lineSeparator(), System.lineSeparator() + "\t\t  "),
-                    ANSI_RESET);
+                    ANSI_RESET,
+                    commit.getHtmlUrl().toString());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
